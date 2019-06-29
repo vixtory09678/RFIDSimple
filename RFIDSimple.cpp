@@ -26,8 +26,6 @@ void RFIDSimple::setCallback(void (*call)(String id)){
 void RFIDSimple::run(){
     if (_rfid.isCard()) {
 
-    if (debug) Serial.println("CARD FOUND");
-
     if (isFound == true) return;
 
     if (_rfid.readCardSerial()) {
